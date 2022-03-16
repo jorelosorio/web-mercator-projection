@@ -14,10 +14,10 @@ func main() {
 	calculatedLatLon := point.ToLonLat()
 	tile := point.ToTile()
 
-	fmt.Println("Location:", location)
+	fmt.Println("LonLat:", location)
 	fmt.Println("Point:", point)
 	fmt.Println("Tile:", tile)
-	fmt.Println("Calculated Location from Pixel Point:", calculatedLatLon)
+	fmt.Println("LonLat from Point:", calculatedLatLon)
 
 	utils.CreateMarkerInMapAt(location, zoomLevel)
 }

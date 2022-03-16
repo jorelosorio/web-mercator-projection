@@ -1,8 +1,45 @@
-# Web Mercator
+# Web Mercator Projection
 
-A Go project to explore the math to calculate and present data in a map using the `Web Mercator Projection`.
+A Go project to explore the `Math` to calculate and present data in a map using the `Web Mercator Projection`.
 
-## Licences and resources
+> To get more information about this topic, please look at the following references: 
+
+- https://en.wikipedia.org/wiki/Web_Mercator_projection
+- https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/#3/15.00/50.00
+- https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
+
+## Dependencies
+
+- https://imagemagick.org/
+- \* `Visual Studio Code` + `Remote - Containers` extension.
+
+> \* Recommended: It makes run all the environment easily using `Docker`.
+
+## How does this project work?
+
+In the main project file `main.go` contains the following actions available:
+
+- Convert a `LonLat` into a `Point` coordinates and vice versa.
+
+- A function to add a `Red-Marker` into a map image. (The coordinates must be setted manually in the code)
+    > The resultant image will be stored in a folder named `data`.
+
+This is how the `main.go` will print out the information:
+
+    LonLat: {-74.92010258781309 11.045882360336755}
+    Point: {298.8939304168872 480.38414652354516 2}
+    Tile: {1 1 2}
+    LonLat from Point: {-74.9201025878131 11.045882360336744}
+
+### Structs definitions
+
+- `LonLat`: A location in the map using angles in degrees.
+- `Point`: A pixel in the map for a specific zoom or scale.
+- `Tile`: Represent at which (tile/block) a Point or LonLat is.
+
+> If you are curious about how the maps where built using the data in `OpenStreetMap` please take a look at this `Gist` https://gist.github.com/jorelosorio/7042bd27e4b2bb03865215d6a5607266
+
+## Licences and assets
 
 - `OpenStreetMap` data is licenced under the Open Data Commons Open Database Licence (ODbL). https://opendatacommons.org/licenses/odbl/1-0/
 

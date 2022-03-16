@@ -21,12 +21,12 @@ func CreateMarkerInMapAt(location geo.LonLat, zoomLevel int) {
 	mapPath := filepath.Join(imagesPath, "maps", fmt.Sprintf("open_street_map_zoom_lvl_%d.png", zoomLevel))
 
 	drawMarkerArgs := fmt.Sprintf("image SrcOver %f,%f 0,0 \"%s\"", markerPosX, markerPosY, markerIconPath)
-	exportPath := filepath.Join(currentPath, "result")
+	exportPath := filepath.Join(currentPath, "data")
 
 	_ = os.Mkdir(exportPath, os.ModeDir)
 
 	// Run ImageMagick command:
 	// It creates a new map image with a marker icon on it
-	cmd := exec.Command("mogrify", "-path", exportPath, "-draw", drawMarkerArgs, mapPath, "-verbose")
+	cmd := exec.Command("mogrify", "-path", exportPath, "-draw", drawMarkerArgs, mapPath)
 	cmd.Run()
 }
