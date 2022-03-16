@@ -9,6 +9,7 @@ type Point struct {
 
 func (p Point) ToLonLat() LonLat {
 	gridSize := float64(p.numberOfTiles()) * TileSizeInRadians
+
 	n := math.Pi - (p.Y / gridSize)
 	lon := (p.X / gridSize) - math.Pi
 	lat := math.Atan(0.5 * (math.Exp(n) - math.Exp(-n)))
