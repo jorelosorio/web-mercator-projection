@@ -1,0 +1,9 @@
+{
+    "name": "Go",
+    "build": {
+        "dockerfile": "../Dockerfile"
+    },
+    "extensions": [
+        "golang.go",
+    ]
+}
