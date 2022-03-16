@@ -16,7 +16,7 @@ func CreateMarkerInMapAt(location geo.LonLat, zoomLevel int) {
 
 	// Assets paths
 	currentPath, _ := os.Getwd()
-	imagesPath := filepath.Join(currentPath, "images")
+	imagesPath := filepath.Join(currentPath, "assets")
 	markerIconPath := filepath.Join(imagesPath, "red_marker_map_icon.png")
 	mapPath := filepath.Join(imagesPath, "maps", fmt.Sprintf("open_street_map_zoom_lvl_%d.png", zoomLevel))
 
