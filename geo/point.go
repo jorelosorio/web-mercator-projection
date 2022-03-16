@@ -18,8 +18,6 @@ func (p Point) ToLonLat() LonLat {
 }
 
 func (p Point) ToTile() Tile {
-	gridSize := float64(p.numberOfTiles() * TileSizeInPixels)
-	row, column := int(math.Ceil(p.X/gridSize)), int(math.Ceil(p.Y/gridSize))
 	row := int(math.Max(0, math.Ceil(p.X/TileSizeInPixels)-1))
 	column := int(math.Min(float64(p.numberOfTiles()-1), math.Ceil(p.Y/TileSizeInPixels)) - 1)
 
