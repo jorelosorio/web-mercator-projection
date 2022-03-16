@@ -8,8 +8,8 @@ import (
 	"web-mercator/geo"
 )
 
-func CreateMarkerInMapAt(location geo.LatLon, zoomLevel int) {
-	point := location.GetPointAtZoom(zoomLevel)
+func CreateMarkerInMapAt(location geo.LonLat, zoomLevel int) {
+	point := location.ToPointAtZoom(zoomLevel)
 
 	// Marker position must be aligned to the centre, bottom
 	markerPosX, markerPosY := point.X-16, point.Y-48

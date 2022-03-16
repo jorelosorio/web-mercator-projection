@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"web-mercator/geo"
 	"web-mercator/utils"
 )
@@ -8,6 +9,15 @@ import (
 const zoomLevel = 2
 
 func main() {
-	location := geo.LatLon{Lon: -74.92010258781309, Lat: 11.045882360336755}
+	location := geo.LonLat{Lon: -74.92010258781309, Lat: 11.045882360336755}
+	point := location.ToPointAtZoom(zoomLevel)
+	calculatedLatLon := point.ToLonLat()
+	tile := point.ToTile()
+
+	fmt.Println("Location:", location)
+	fmt.Println("Point:", point)
+	fmt.Println("Tile:", tile)
+	fmt.Println("Calculated Location from Pixel Point:", calculatedLatLon)
+
 	utils.CreateMarkerInMapAt(location, zoomLevel)
 }
