@@ -55,6 +55,12 @@ Install it from https://go.dev/dl/
 
 Install it using the following instructions https://imagemagick.org/script/download.php
 
+### Build the executable
+
+    go build .
+
+> The binary file depends on the `assets` folder to build the map, make sure to have it on the same directory.
+
 ## Licences and assets
 
 - `OpenStreetMap` data is licenced under the Open Data Commons Open Database Licence (ODbL). https://opendatacommons.org/licenses/odbl/1-0/
