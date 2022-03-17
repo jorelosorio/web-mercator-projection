@@ -10,13 +10,6 @@ A Go project to explore the `Math` to calculate and present data in a map using 
 - https://www.maptiler.com/google-maps-coordinates-tile-bounds-projection/#3/15.00/50.00
 - https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
 
-## Dependencies
-
-- https://imagemagick.org/
-- \* `Visual Studio Code` + `Remote - Containers` extension.
-
-> \* Recommended: It makes run all the environment easily using `Docker`.
-
 ## How does this project work?
 
 In the main project file `main.go` contains the following actions available:
@@ -40,6 +33,31 @@ This is how the `main.go` will print out the information:
 - `Tile`: Represent at which (tile/block) a Point or LonLat is.
 
 > If you are curious about how the maps where built using the data in `OpenStreetMap` please take a look at this `Gist` https://gist.github.com/jorelosorio/7042bd27e4b2bb03865215d6a5607266
+
+## Tools
+
+- GoLang `1.17`
+- Docker
+- ImageMagick ``6.9.11-60 Q16 x86_64 2021-01-25 https://imagemagick.org`
+- Visual Studio Code `Optional!`
+    > It requires a `Remote - Containers` extension. for more information please refers to: https://code.visualstudio.com/docs/remote/containers#_getting-started
+
+## Dependencies
+
+- https://imagemagick.org/
+
+## Development
+
+This project contains a `Dockerfile` file with all required dependencies to run it using `Visual Studio Code` + `Remote - Containers` extension.
+However, if you want to make it run locally in your development machine, please follow the instructions below.
+
+### Install Go
+
+Install it from https://go.dev/dl/
+
+### Install ImageMagick
+
+Install it using the following instructions https://imagemagick.org/script/download.php
 
 ## Licences and assets
 
