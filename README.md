@@ -38,7 +38,7 @@ This is how the `main.go` will print out the information:
 
 - GoLang `1.17`
 - Docker
-- ImageMagick ``6.9.11-60 Q16 x86_64 2021-01-25 https://imagemagick.org`
+- ImageMagick `6.9.11-60`
 - Visual Studio Code `Optional!`
     > It requires a `Remote - Containers` extension. for more information please refers to: https://code.visualstudio.com/docs/remote/containers#_getting-started
 
