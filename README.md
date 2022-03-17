@@ -42,10 +42,6 @@ This is how the `main.go` will print out the information:
 - Visual Studio Code `Optional!`
     > It requires a `Remote - Containers` extension. for more information please refers to: https://code.visualstudio.com/docs/remote/containers#_getting-started
 
-## Dependencies
-
-- https://imagemagick.org/
-
 ## Development
 
 This project contains a `Dockerfile` file with all required dependencies to run it using `Visual Studio Code` + `Remote - Containers` extension.
