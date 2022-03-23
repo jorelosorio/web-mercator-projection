@@ -23,7 +23,7 @@ jobs:
         run: mkdir ./coverage
 
       - name: Run tests with Go ${{ matrix.go }} on ${{ matrix.os }}
-        run: go test -covermode atomic -coverprofile=./coverage/profile.cov
+        run: go test -covermode atomic -coverprofile=./coverage/profile.cov ./geo
 
       - run: go install github.com/jandelgado/gcov2lcov@latest
 
