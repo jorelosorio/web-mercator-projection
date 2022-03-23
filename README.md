@@ -1,5 +1,7 @@
 # Web Mercator Projection
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/jorelosorio/web-mercator-projection)](https://goreportcard.com/report/github.com/jorelosorio/web-mercator-projection)
+
 ![WorldMap](https://github.com/jorelosorio/web-mercator-projection/blob/main/assets/cover.png?raw=true)
 
 A Go project to explore the `Math` to calculate and present data in a map using the `Web Mercator Projection`.
