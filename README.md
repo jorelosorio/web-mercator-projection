@@ -1,5 +1,6 @@
 # Web Mercator Projection
 
+[![Tests](https://github.com/jorelosorio/web-mercator-projection/actions/workflows/tests.yml/badge.svg)](https://github.com/jorelosorio/web-mercator-projection/actions/workflows/tests.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/jorelosorio/web-mercator-projection)](https://goreportcard.com/report/github.com/jorelosorio/web-mercator-projection)
 
 ![WorldMap](https://github.com/jorelosorio/web-mercator-projection/blob/main/assets/cover.png?raw=true)
