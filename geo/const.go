@@ -10,11 +10,12 @@ const (
 	degrees float64 = 180.0 / math.Pi
 	twoPi   float64 = math.Pi * 2
 	Pi4     float64 = math.Pi / 4
-	//
-	// Map related
-	//
-	TileSizeInPixels  float64 = 256.0             // Tile size is 256x256
-	TileSizeInRadians float64 = 128 / math.Pi     // A value that represents a map that extends from 0 to 256 / (2 * PI)
-	LonEdge           float64 = 180               // From −180° to 180° Longitude
-	LatEdge           float64 = 85.05112877980659 // Also know as yMax -85.05° North and 85.05° South
+	// TileSizeInPixels size is 256x256
+	TileSizeInPixels float64 = 256.0
+	// TileSizeInRadians a value that represents a map that extends from 0 to 256 / (2 * PI)
+	TileSizeInRadians float64 = 128 / math.Pi
+	// LonEdge edges from −180° to 180° Longitude
+	LonEdge float64 = 180
+	// LatEdge edges from -85.05° North and 85.05° South (Also know as yMax)
+	LatEdge float64 = 85.05112877980659
 )
