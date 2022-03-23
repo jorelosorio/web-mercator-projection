@@ -1,0 +1,45 @@
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Go ${{ matrix.go }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        go: ["1.16.x", "1.17.x"]
+        os: [ubuntu-latest]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-go@v2
+        with:
+          go-version: ${{ matrix.go }}      
+
+      - name: Run tests with Go ${{ matrix.go }} on ${{ matrix.os }}
+        run: go test -covermode atomic -coverprofile=./coverage/profile.cov
+
+      - run: go install github.com/jandelgado/gcov2lcov@latest
+
+      - name: Use gcov2lcov
+        run: gcov2lcov -infile=./coverage/profile.cov -outfile=./coverage/lcov.info
+      
+      - name: Coveralls Parallel
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          flag-name: run-${{ matrix.os }}-go-${{ matrix.go }}
+          parallel: true
+  
+  finish:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Coveralls Finished
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          parallel-finished: true
