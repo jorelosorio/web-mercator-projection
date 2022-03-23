@@ -57,7 +57,7 @@ Install it using the following instructions https://imagemagick.org/script/downl
 
 ### Build the executable
 
-    go build .
+    go build ./examples/main.go
 
 > The binary file depends on the `assets` folder to build the map, make sure to have it on the same directory.
 
