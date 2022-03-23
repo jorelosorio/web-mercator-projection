@@ -1,13 +1,16 @@
-package utils
+package internal
 
 import (
 	"fmt"
 	"os"
 	"os/exec"
 	"path/filepath"
-	"web-mercator/geo"
+
+	"github.com/jorelosorio/web-mercator-projection/geo"
 )
 
+// CreateMarkerInMapAt receive a LonLat object and a zoom level to create a composited image of a world map
+// with a maker on it.
 func CreateMarkerInMapAt(location geo.LonLat, zoomLevel int) {
 	point := location.ToPointAtZoom(zoomLevel)
 

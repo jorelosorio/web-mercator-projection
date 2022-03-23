@@ -12,7 +12,7 @@ A Go project to explore the `Math` to calculate and present data in a map using 
 
 ## How does this project work?
 
-In the main project file `main.go` contains the following actions available:
+In the main example project, there is a file `main.go` that contains the following actions available:
 
 - Convert a `LonLat` into a `Point` coordinates and vice versa.
 

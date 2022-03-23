@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"web-mercator/geo"
-	"web-mercator/utils"
+
+	"github.com/jorelosorio/web-mercator-projection/geo"
+	"github.com/jorelosorio/web-mercator-projection/internal"
 )
 
 const zoomLevel = 2
@@ -19,5 +20,5 @@ func main() {
 	fmt.Println("Tile:", tile)
 	fmt.Println("LonLat from Point:", calculatedLatLon)
 
-	utils.CreateMarkerInMapAt(location, zoomLevel)
+	internal.CreateMarkerInMapAt(location, zoomLevel)
 }
