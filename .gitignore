@@ -3,6 +3,7 @@
 .vscode
 data
 main
+coverage
 
 # GO ====
 
