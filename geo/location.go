@@ -1,6 +1,7 @@
 package geo
 
 import (
+	"fmt"
 	"math"
 )
 
@@ -18,6 +19,11 @@ func (l LonLat) ToPointAtZoom(zoomLevel int) Point {
 	y := mapSize * (math.Pi - math.Log(math.Tan(Pi4+(DegToRad(l.fixedLat())/2))))
 
 	return Point{X: x, Y: y, Z: zoomLevel}
+}
+
+// String prints the longitude, latitude degrees
+func (l LonLat) String() string {
+	return fmt.Sprintf("Longitude: %.8f, Latitude: %.8f", l.Lon, l.Lat)
 }
 
 func (l LonLat) fixedLon() float64 { return withinMinMax(l.Lon, -LonEdge, LonEdge) }
