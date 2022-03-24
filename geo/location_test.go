@@ -13,7 +13,7 @@ func TestNewLonLat(t *testing.T) {
 }
 
 func TestConvertToString(t *testing.T) {
-	lonLat := LonLat{Lon: LonEdge, Lat: LatEdge}
+	lonLat := LonLat{Lon: WorldBBox.Right, Lat: WorldBBox.Top}
 
 	if fmt.Sprint(lonLat) != fmt.Sprintf("Longitude: %.8f, Latitude: %.8f", lonLat.Lon, lonLat.Lat) {
 		t.Error("Invalid String format when printing LonLat attributes")
@@ -39,7 +39,7 @@ func TestConvertToPointExceedsRightBottomEdges(t *testing.T) {
 }
 
 func TestConvertToPointTopLeft(t *testing.T) {
-	lonLat := LonLat{Lon: -LonEdge, Lat: -LatEdge}
+	lonLat := LonLat{Lon: WorldBBox.Left, Lat: WorldBBox.Bottom}
 	point := lonLat.ToPointAtZoom(1)
 
 	if point.X != 0 && point.Y != 0 && point.Z != 1 {
@@ -48,7 +48,7 @@ func TestConvertToPointTopLeft(t *testing.T) {
 }
 
 func TestConvertToPointRightBottom(t *testing.T) {
-	lonLat := LonLat{Lon: LonEdge, Lat: LatEdge}
+	lonLat := LonLat{Lon: WorldBBox.Right, Lat: WorldBBox.Top}
 	point := lonLat.ToPointAtZoom(1)
 
 	if point.X != 512 && point.Y != 512 && point.Z != 1 {

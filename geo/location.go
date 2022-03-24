@@ -26,6 +26,6 @@ func (l LonLat) String() string {
 	return fmt.Sprintf("Longitude: %.8f, Latitude: %.8f", l.Lon, l.Lat)
 }
 
-func (l LonLat) fixedLon() float64 { return withinMinMax(l.Lon, -LonEdge, LonEdge) }
+func (l LonLat) fixedLon() float64 { return WorldBBox.WithinXAxis(l.Lon) }
 
-func (l LonLat) fixedLat() float64 { return withinMinMax(l.Lat, -LatEdge, LatEdge) }
+func (l LonLat) fixedLat() float64 { return WorldBBox.WithinYAxis(l.Lat) }
