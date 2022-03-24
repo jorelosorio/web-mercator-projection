@@ -9,7 +9,8 @@ const (
 	radians float64 = math.Pi / 180.0
 	degrees float64 = 180.0 / math.Pi
 	twoPi   float64 = math.Pi * 2
-	Pi4     float64 = math.Pi / 4
+	// Pi4 is a quarter of Pi
+	Pi4 float64 = math.Pi / 4
 	//
 	// Web Mercator projection constraints
 	//
