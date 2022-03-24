@@ -3,6 +3,7 @@
 [![Tests](https://github.com/jorelosorio/web-mercator-projection/actions/workflows/tests.yml/badge.svg)](https://github.com/jorelosorio/web-mercator-projection/actions/workflows/tests.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/jorelosorio/web-mercator-projection)](https://goreportcard.com/report/github.com/jorelosorio/web-mercator-projection)
 [![Coverage Status](https://coveralls.io/repos/github/jorelosorio/web-mercator-projection/badge.svg?branch=main)](https://coveralls.io/github/jorelosorio/web-mercator-projection?branch=main)
+[![Go Reference](https://pkg.go.dev/badge/github.com/jorelosorio/web-mercator-projection.svg)](https://pkg.go.dev/github.com/jorelosorio/web-mercator-projection)
 
 ![WorldMap](https://github.com/jorelosorio/web-mercator-projection/blob/main/assets/cover.png?raw=true)
 
