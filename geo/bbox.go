@@ -1,5 +1,6 @@
 package geo
 
+// BBox is the bounding box constraint where the Mercator projection works.
 type BBox struct {
 	Top, Left, Bottom, Right float64
 }
