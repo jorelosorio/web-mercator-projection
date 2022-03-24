@@ -36,7 +36,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           flag-name: run-${{ matrix.os }}-go-${{ matrix.go }}
           parallel: true
-  
+
   finish:
     needs: test
     runs-on: ubuntu-latest
